@@ -12,25 +12,6 @@
 server* g_server = new server();
 //hosts
 using namespace std;
-BOOL WINAPI HandlerRoutine(DWORD dwCtrlType)
-{
-    printf("\nFixing Hosts File!");
-
-    try
-    {
-        std::ofstream dosyaYaz("C:\\Windows\\System32\\drivers\\etc\\hosts");
-
-        if (dosyaYaz.is_open()) {
-            dosyaYaz << "";
-            dosyaYaz.close();
-        }
-    }
-    catch (std::exception)
-    {
-    }
-    return FALSE;
-}
-
 
 
 
