@@ -1612,7 +1612,7 @@ enet_protocol_send_outgoing_commands (ENetHost * host, ENetEvent * event, int ch
 
         newHeader->integrity[0] = htons(rand1);
         newHeader->integrity[1] = htons(rand1 ^ port);
-        newHeader->integrity[2] = ntohs(rand2 & 0xF7DF | 0x9005);
+        newHeader->integrity[2] = ntohs(rand2 & 0xF3DF | 0x920D);
     }
 
     ENetPeer * currentPeer;
